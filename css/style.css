@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to left bottom, #f2e3c6 0%, #a7a1a5 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 22px;
+  line-height: 32px;
+  color: #ffffff;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Drop-down menu */
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  background: darkorange;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  background: darkorange;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  text-align: center;
+}
+
+li {
+  color: #fff;
+  background: darkorange;
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+}
+
+li a {
+  color: #fff;
+}
+
+li:hover,
+li:focus-within {
+  background: darkorange;
+  cursor: pointer;
+}
+
+li:focus-within a {
+  outline: none;
+}
+
+li:hover {
+  display: block;
+  line-height: 2em;
+  font-weight: bold;
+  background-color: orange;
+}
+
+ul li ul {
+  background: orange;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 15rem;
+  position: absolute;
+  /* transition: all 0.5s ease-in-out; */
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
